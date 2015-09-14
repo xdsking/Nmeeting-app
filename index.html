@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Nmeeting-app</title>
+    <link rel="stylesheet" href="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
+    <script src="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on("pageinit","#pageone",function(){
+
+        });
+    </script>
+</head>
+<body>
+<div data-role="page" id="pageone" data-theme="a">
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <a data-role="button" data-iconpos="notext" data-icon="home" href="portal.html"></a>
+        <h1>视频窗口</h1>
+    </div>
+
+    <div class="contentPane" data-role="content">
+
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        <h1>此处是页脚文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>我是一个对话框！</h1>
+    </div>
+
+    <div data-role="content">
+        <p>对话框与普通页面不同，它显示在当前页面的顶端。它不会横跨整个页面宽度。对话框页眉中的图标 “X” 可关闭对话框。</p>
+        <a href="#pageone">转到页面一</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>
