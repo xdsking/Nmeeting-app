@@ -19,3 +19,56 @@ body{
 .loginPane input{
     padding-top: 10px;
 }
+#videoPane{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    background-image: url('../images/360wallpaper_dt.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.videoContentPane{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+}
+/*
+自定义图标*/
+.ui-icon-cstm-log:after {
+    background-image: url("../images/person.png");
+    background-size: 18px 18px;
+/*    border-radius: 0; *//*图标形态，0=方形，不设置就是默认的圆形*/
+}
+.ui-icon-cstm-home:after {
+    background-image: url("../images/home.png");
+    background-size: 18px 18px;
+}
+.ui-icon-cstm-chat:after {
+    background-image: url("../images/chat.png");
+    background-size: 18px 18px;
+}
+.ui-icon-cstm-men:after {
+    background-image: url("../images/men.png");
+    background-size: 18px 18px;
+}
+.ui-icon-cstm-menu:after {
+    background-image: url("../images/menu.png");
+    background-size: 18px 18px;
+}
+.ui-icon-cstm-menu1:after {
+    background-image: url("../images/menu1.png");
+    background-size: 18px 18px;
+}
+#menuPlus{
+    display: none;
+}
+.chatBox{
+    margin-left: 20px;
+    width: 50%;
+    height: 30px;
+    vertical-align: middle;
+}

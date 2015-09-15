@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title>Nmeeting-app</title>
     <link rel="stylesheet" href="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/index.css">
@@ -10,45 +10,45 @@
     <script src="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script>
         /*$(document).on("pageinit","#pageone",function(){
-            $("#log").click(function(){
-                //return false;
-            });
-        });*/
-        $(function(){
-            $("#log").click(function(){
+         $("#log").click(function(){
+         //return false;
+         });
+         });*/
+        $(function () {
+            $("#log").click(function () {
                 return true;
             });
         });
     </script>
 </head>
 <body>
-<div data-role="page" id="home" data-theme="a">
+<div data-role="page" id="home">
     <div data-role="header">
         <a data-role="button" data-iconpos="notext" data-icon="gear" style="display: none;"></a>
+
         <h1>首页</h1>
-        <a data-role="button" data-iconpos="notext" data-rel="dialog" data-icon="gear" href="#login"></a>
+        <a data-role="button" data-iconpos="notext" data-rel="dialog" data-icon="gear" href="#loginDialog"></a>
     </div>
 
     <div data-role="content"></div>
-
 </div>
-
-<div data-role="page" id="login">
+<!--用户登陆对话框-->
+<div data-role="page" id="loginDialog">
     <div data-role="header">
         <h1>用户登陆</h1>
     </div>
 
     <div data-role="content">
-        <form class="loginPane">
+        <div class="loginPane">
             <div data-role="fieldcontain">
                 <!--<label for="userName">用户名：</label>-->
                 <input type="text" name="userName" id="userName" placeholder="用户名">
                 <!--<label for="psw">密码：</label>-->
                 <input type="password" name="psw" id="psw" placeholder="密码">
-                </div>
+            </div>
             <a id="log" data-role="button" href="index.html">登陆</a>
-            <a  data-role="button" href="#home">取消</a>
-        </form>
+            <a data-role="button" href="#home">取消</a>
+        </div>
 
     </div>
 </div>
