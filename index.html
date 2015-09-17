@@ -9,24 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
     <script src="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script>
-        $(function () {
-            var flag = true, menuPlus = $("#menuPlus");
-            $("#menuBar").click(function (evt) {
-                if (flag) {
-                    //$(this).attr("data-icon", "cstm-menu1");
-                    menuPlus.css("display", "block");
-                    flag = false;
-                }
-                else {
-                    //$(this).attr("data-icon", "cstm-menu");
-                    menuPlus.css("display", "none");
-                    flag = true;
-                }
-                evt.stopPropagation();
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
 </head>
 <body>
 <!--首页-->
@@ -37,7 +20,11 @@
            href="#loginDialog"></a>
     </div>
 
-    <div data-role="content"></div>
+    <div class="home-content" data-role="content">
+        <input type="text" name="fname" id="roomName" placeholder="请输入房间名">
+        <a href="#mainPane"><input type="button" value="进入房间"></a>
+        <a href="#mainPane"><input type="button" value="创建房间"></a>
+    </div>
 </div>
 <!--主窗口-->
 <div data-role="page" id="mainPane" data-theme="a">
@@ -55,20 +42,25 @@
 
     <div data-role="footer" data-position="fixed" data-fullscreen="true">
         <!--<h1>我是页脚</h1>-->
-        <a data-role="button" data-iconpos="notext" data-icon="cstm-menu" style="margin: 8px;"></a>
-        <input type="text" data-inline="true" data-role="none" class="chatBox">
-        <input type="button" data-inline="true" value="发送" class="ui-btn-right">
-        <a id="menuBar" data-role="button" data-iconpos="notext" style="margin: 6px;" data-icon="cstm-menu"
+        <a href="#" class="cstm-sound-icon">
+            <img id="soundContorl" src="images/sound.png" class="ui-li-icon">
+        </a>
+        <input id="chatBox" type="text" data-inline="true" data-role="none" class="chatBox">
+        <a href="#" style="padding: 3px 6px;">
+            <img src="images/send.png" alt="发送" class="ui-li-icon">
+        </a>
+        <a id="menuBar" data-role="button" data-iconpos="notext" style="margin: 4px;" data-icon="cstm-menu"
            class="ui-btn-right"></a>
 
         <div id="menuPlus" data-role="navbar">
             <ul>
                 <li><a href="#" data-role="button" data-iconpos="notext" data-icon="cstm-chat">聊天记录</a></li>
                 <li><a href="#" data-role="button" data-iconpos="notext" data-icon="cstm-men">与会人员</a></li>
-                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="delete">删除</a></li>
-                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="check">喜爱</a></li>
-                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="info">信息</a></li>
-                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="arrow-r">信息</a></li>
+                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="delete">功能1</a></li>
+                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="check">功能2</a></li>
+                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="info">功能3</a></li>
+                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="check">功能2</a></li>
+                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="info">功能3</a></li>
             </ul>
         </div>
     </div>
