@@ -25,6 +25,7 @@ $(function () {
     initSoundContorl();
     initHomeContentSize();
     initRoomNamePosition();
+    initOptionEvent();
 });
 var initSoundContorl = function () {
     var flag = true;
@@ -49,4 +50,18 @@ var initHomeContentSize = function () {
 var initRoomNamePosition=function(){
     var roomName=document.body.clientHeight-235+"px";
     $(".home-content div:first").css("margin-top",roomName);
+};
+//初始化事件
+var initOptionEvent=function(){
+    var chartFlag=false;
+    $("#switchChartState").change(function(){
+        if(this.value=="on"){
+            $("#chartPane").css("display","block");
+            chartFlag=true;
+        }else{
+
+            $("#chartPane").css("display","none");
+            chartFlag=false;
+        }
+    });
 };

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title>Nmeeting-app</title>
     <link rel="stylesheet" href="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="../CDN/lib/Font-Awesome-3.2.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
     <script src="../CDN/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -38,6 +37,7 @@
     <div class="videoContentPane" data-role="content">
         <div id="videoPane">
         </div>
+        <div id="chartPane"></div>
     </div>
 
     <div data-role="footer" data-position="fixed" data-fullscreen="true">
@@ -54,7 +54,7 @@
 
         <div id="menuPlus" data-role="navbar">
             <ul>
-                <li><a href="#" data-role="button" data-iconpos="notext" data-icon="cstm-chat">聊天记录</a></li>
+                <li><a href="#chartOptionPane" id="chartOption" data-rel="dialog" data-role="button" data-iconpos="notext" data-icon="cstm-chat">聊天记录</a></li>
                 <li><a href="#" data-role="button" data-iconpos="notext" data-icon="cstm-men">与会人员</a></li>
                 <li><a href="#" data-role="button" data-iconpos="notext" data-icon="delete">功能1</a></li>
                 <li><a href="#" data-role="button" data-iconpos="notext" data-icon="check">功能2</a></li>
@@ -95,6 +95,20 @@
             <a data-role="button" href="#home">取消</a>
         </div>
 
+    </div>
+</div>
+<div data-role="page" id="chartOptionPane">
+    <div data-role="header">
+        <h1>显示隐藏聊天记录</h1>
+    </div>
+    <div data-role="content">
+        <div data-role="fieldcontain">
+            <label for="switchChartState">显示聊天记录：</label>
+            <select name="switch" id="switchChartState" data-role="slider">
+                <option value="on">On</option>
+                <option value="off" selected>Off</option>
+            </select>
+        </div>
     </div>
 </div>
 </body>

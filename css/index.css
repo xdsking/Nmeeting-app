@@ -90,3 +90,11 @@ body{
 #roomName{
     height: 45px;
 }
+#chartPane{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    opacity: .5;
+    display: none;
+}
