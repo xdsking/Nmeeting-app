@@ -3,50 +3,16 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Demo聊天</title>
-    <link href="//cdn.bootcss.com/animate.css/3.3.0/animate.css" rel="stylesheet">
+    <link href="../CDN/lib/animate.css-master/animate.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <script src="../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
-    <script src="../CDN/lib/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+    <script src="js/animate.js"></script>
     <script>
-        /**
-         *  @param domNode <Object> 消息片段
-         *  @param animType <String> 动画类型
-         *  @param isRemove <boolean> 执行完动画是否移除domNode
-         */
-        var executeAnim = function (domNode, animType, isRemove) {
-            domNode.removeClass().addClass(animType + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                if (isRemove) {
-                    $(this).remove();
-                }
-            });
-        };
-        /**
-         * @summary 发送消息处理函数;
-         * @param parentNode 消息父容器;
-         * @param newMessage 消息片段;
-         */
-        var sendMessage = function (parentNode, newMessage) {
-            var animInType = "slideInUp",//添加消息时的动画效果;
-                    animOutType = "flipOutX",//移除消息时的动画效果;
-                    timeOut = 5000,//延迟5秒后移除消息;
-                    maxMessageNum = 5;//最多消息数量;
-            parentNode.append(newMessage);//父容器中插入聊天信息;
-            executeAnim(newMessage, animInType, false);//添加消息;
-            window.setTimeout(function () {
-                executeAnim(newMessage, animOutType, true);//移除消息;
-            }, timeOut);
-            var childrenNode = parentNode.children(), childrenNodeLength = childrenNode.length, endIndex = childrenNodeLength - maxMessageNum;
-            if (endIndex > 0) {
-                for (var i = 0; i < endIndex; i++) {
-                    executeAnim($(childrenNode[i]), animOutType, true);//保持消息量不超过maxMessageNum
-                }
-            }
-        };
-
         $(function () {
             var chartPane = $("#chartPane"),//聊天记录容器，相对于其父容器绝对定位;
                     temp = 0;
             $("#sendMessage").click(function () {
-                var newMessage = $('<p>xxx：一条新消息xxxxxxxxxxxxxxxxxxxxxx' + temp + '！</p>');
+                var newMessage = $('<div><label>杨颖：</label>一条新消息，相对于其父容器' + temp + '</div>');
                 sendMessage(chartPane, newMessage);
                 temp += 20;
             });
@@ -54,13 +20,10 @@
     </script>
 </head>
 <body>
-
-
 <div style="height: 400px;width: 250px;background-color: powderblue;position: absolute">
     <div id="chartPane" style="position: absolute;bottom: 20px;font-family: '微软雅黑'"></div>
 </div>
 <div style="margin-left: 260px;">
-
     <input type="button" value="发送消息" id="sendMessage">
 </div>
 </body>
