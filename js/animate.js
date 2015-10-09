@@ -29,7 +29,8 @@ var sendMessage = function (parentNode, newMessage) {
     window.setTimeout(function () {
         executeAnim(newMessage, animOutType, true);//移除消息;
     }, timeOut);
-    var childrenNode = parentNode.children(), childrenNodeLength = childrenNode.length, endIndex = childrenNodeLength - maxMessageNum;
+    var childrenNode = parentNode.children(), childrenNodeLength = childrenNode.length,
+        endIndex = childrenNodeLength - maxMessageNum;
     if (endIndex > 0) {
         for (var i = 0; i < endIndex; i++) {
             executeAnim($(childrenNode[i]), animOutType, true);//保持消息量不超过maxMessageNum
