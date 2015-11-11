@@ -1,0 +1,27 @@
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+    min-width: 678px;
+}
+
+.cstm-container,.cstm-col-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cstm-nav {
+    height: 80px;
+}
+
+.cstm-nav li {
+    font-weight: bold;
+    margin-top: 36px;
+}
+.cstm-col-padding div{
+    margin-bottom: 2px;
+}
+.cstm-panel-body{
+    padding: 0;
+}

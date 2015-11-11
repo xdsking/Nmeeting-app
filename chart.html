@@ -17,6 +17,38 @@
                 temp += 20;
             });
         });
+
+    </script>
+    <script type="text/javascript">        require([            "dojox/charting/Chart2D", "dojox/charting/plot2d/Lines", "dojox/charting/plot2d/StackedAreas", "dojox/charting/themes/PlotKit/blue", "dojox/charting/action2d/Highlight", "dojox/charting/action2d/Tooltip", "dojox/charting/action2d/MoveSlice" , "dojox/charting/widget/Legend", "dojo/domReady!"        ], function (Chart2D, Lines, StackedAreas, theme, Highlight, Tooltip, MoveSlice, Legend) {
+        var chartData = [14000, 9200, 11811, 12000, 8662, 12000, 8662];
+        var chartData1 = [20000, 13000, 4000, 5000, 6000, 7008, 8000];
+        var chart1 = new dojox.charting.Chart2D("chart");
+        chart1.setTheme(dojox.charting.themes.PlotKit.blue);
+        chart1.addPlot("default", {                type: "Lines", markers: true, tension: "S"            });
+        var xStr = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];
+        var myLabelFunc = function (text, value, precision) {
+            return xStr[text - 1];
+        };
+        chart1.addAxis("x", { labelFunc: myLabelFunc });
+        chart1.addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major" });
+        chart1.addSeries("china", chartData, {stroke: {color: "#5782AE"}, fill: "#5782AE"});
+        chart1.addSeries("usa", chartData1, {stroke: {color: "#000066"}, fill: "#000066"});
+        chart1.render();
+    });    </script>
+    <script>        require([            "dojox/charting/Chart2D", "dojox/charting/plot2d/ClusteredBars", "dojox/charting/plot2d/ClusteredColumns", "dojox/charting/plot2d/Bars", "dojox/charting/plot2d/Columns", "dojox/charting/axis2d/Default", "dojo/domReady!"        ], function (Chart2D) {
+        var chartData1 = [14000, 9200, 11811, 12000, 8662, 12000, 8668];
+        var chartData2 = [2000, 4440, 4000, 5987, 4567, 5677, 5678];
+        var chart = new Chart2D("barchart");
+        chart.addPlot("default", {                type: type, gap: 8            });
+        varxStr = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];			// Add axes
+    var myLabelFunc = function(text, value, precision){
+        return xStr[text-1];
+    };
+    chart.addAxis("x", { labelFunc: myLabelFunc });
+        chart.addAxis("y", { vertical:true, fixLower: "major", fixUpper: "major" });
+        chart.addSeries("Series1",chartData1);
+        chart.addSeries("Series2",chartData2);
+        chart.render();		});
     </script>
 </head>
 <body>
