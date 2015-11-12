@@ -1,0 +1,22 @@
+.steepPane2 {
+    display: none;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+
+.progressLabel {
+    color: #fff3a5
+}
+
+.steepPane3 {
+    display: none;
+}
+.personControlPane span{
+    cursor: pointer;
+    font-size: 16px;
+}
+.cstm-glyphicon-add:hover,.cstm-glyphicon-remove:hover{
+    color: #003bb3;
+}

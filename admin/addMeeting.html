@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/addMeeting.css" rel="stylesheet">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/html5shiv.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/addMeeting.js"></script>
+</head>
+<body>
+<div class="steepPane1">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+             aria-valuemax="100" style="width: 34%;padding-left: 20%">
+            第1步
+        </div>
+    </div>
+    <div class="progressLabel" style="margin-left: 12%;"><label>填写会议信息</label></div>
+    <div class="form-horizontal" style="color: white;margin-top: 20px;">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">会议名称：</label>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="请输入名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">会议时间：</label>
+
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">进入密码：</label>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">最大参加人数：</label>
+
+            <div class="col-sm-1">
+                <input type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">会议内容：</label>
+
+            <div class="col-sm-6">
+                <textarea class="form-control" placeholder="" rows="10" maxlength="200"></textarea>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button id="previousStep1" type="button" class="btn btn-lg btn-default">取&nbsp;&nbsp;消</button>
+        <button id="nextSteep1" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">下一步</button>
+    </div>
+</div>
+<div class="steepPane2">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+             style="width: 64%;padding-left: 40%;">
+            第2步
+        </div>
+    </div>
+    <div class="progressLabel" style="text-align: center"><label>邀请成员</label></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="min-height: 500px;">
+                        Basic panel example
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div class="panel panel-default personControlPane">
+                    <div class="panel-body" style="min-height: 500px;">
+                        <div style="    position: absolute;top: 50%;margin-top: -32px;left: 50%;margin-left: -8px;">
+                            <div style="text-align: center;">
+                                <span class="glyphicon glyphicon-triangle-right cstm-glyphicon-add" title="添加" aria-hidden="true"></span>
+                            </div>
+                            <div style="margin-top: 20px;text-align: center;">
+                                <span class="glyphicon glyphicon-triangle-left cstm-glyphicon-remove" title="移除" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="min-height: 500px;">
+                        Basic panel example
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button id="previousStep2" type="button" class="btn btn-lg btn-default">上一步</button>
+        <button id="nextSteep2" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">下一步</button>
+    </div>
+</div>
+<div class="steepPane3">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+             style="width: 100%;padding-left: 70%">
+            第3步
+        </div>
+    </div>
+    <div class="progressLabel" style="margin-left: 82%;"><label>成功创建</label>
+    </div>
+    <div style="text-align: center;">
+        <button id="previousStep3" type="button" class="btn btn-lg btn-default">上一步</button>
+        <button id="nextSteep3" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">完成</button>
+    </div>
+</div>
+</body>
+</html>
