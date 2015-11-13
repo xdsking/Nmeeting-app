@@ -19,11 +19,12 @@
     <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript" language="javascript">
         function iFrameHeight() {
-            var ifm= document.getElementById("iframepage");
-            var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+            var ifm= $("#iframepage");
+            var subWeb = document.frames ? document.frames["iframepage"].document : ifm[0].contentDocument;
             if(ifm != null && subWeb != null) {
-                ifm.height = subWeb.body.scrollHeight;
-                ifm.width = subWeb.body.scrollWidth;
+                ifm.css("min-height",subWeb.body.scrollHeight+"px");
+                //ifm.height = subWeb.body.scrollHeight;
+                //ifm.width = subWeb.body.scrollWidth;
             }
         }
     </script>
@@ -43,8 +44,8 @@
                 <div class="panel-heading">会议管理</div>
                 <div class="panel-body cstm-panel-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item active">添加会议</a>
-                        <a href="#" class="list-group-item">更新会议</a>
+                        <a href="#" link="addMeeting" class="list-group-item active">添加会议</a>
+                        <a href="#" link="UpdateMeeting" class="list-group-item">更新会议</a>
                         <a href="#" class="list-group-item">进入会议</a>
                         <a href="#" class="list-group-item">查看会议</a>
                         <a href="#" class="list-group-item">资源点播</a>
