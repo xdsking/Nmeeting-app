@@ -29,46 +29,52 @@
         </div>
     </div>
     <div class="progressLabel" style="margin-left: 12%;"><label>填写会议信息</label></div>
-    <div class="form-horizontal" style="color: white;margin-top: 20px;">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">会议名称：</label>
+    <div class="container-fluid">
+        <div class="form-horizontal" style="color: white;margin-top: 20px;">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">会议名称：</label>
 
-            <div class="col-sm-2">
-                <input type="text" class="form-control" placeholder="请输入名称">
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="请输入名称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">会议时间：</label>
+
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">进入密码：</label>
+
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">最大参加人数：</label>
+
+                <div class="col-sm-1">
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">会议内容：</label>
+
+                <div class="col-sm-6">
+                    <textarea class="form-control" placeholder="" rows="10" maxlength="200"></textarea>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">会议时间：</label>
 
-            <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="">
+        <div class="row">
+            <div style="text-align: center;">
+                <button id="previousStep1" type="button" class="btn btn-md btn-default">取&nbsp;&nbsp;消</button>
+                <button id="nextSteep1" type="button" class="btn btn-md btn-default" style="margin-left: 50px;">下一步
+                </button>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">进入密码：</label>
-
-            <div class="col-sm-2">
-                <input type="text" class="form-control" placeholder="">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">最大参加人数：</label>
-
-            <div class="col-sm-1">
-                <input type="text" class="form-control" placeholder="">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">会议内容：</label>
-
-            <div class="col-sm-6">
-                <textarea class="form-control" placeholder="" rows="10" maxlength="200"></textarea>
-            </div>
-        </div>
-    </div>
-    <div style="text-align: center;">
-        <button id="previousStep1" type="button" class="btn btn-lg btn-default">取&nbsp;&nbsp;消</button>
-        <button id="nextSteep1" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">下一步</button>
     </div>
 </div>
 <div class="steepPane2">
@@ -79,42 +85,47 @@
         </div>
     </div>
     <div class="progressLabel" style="text-align: center"><label>邀请成员</label></div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 20px;">
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-7 col-xs-7">
                 <div class="panel panel-default">
                     <div class="panel-body cstm-panel-body">
-                        Basic panel example
+                        人员列表
                     </div>
                 </div>
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-1 col-md-1 col-xs-1">
                 <div class="panel panel-default personControlPane">
                     <div class="panel-body cstm-panel-body">
                         <div style="    position: absolute;top: 50%;margin-top: -32px;left: 50%;margin-left: -8px;">
                             <div style="text-align: center;">
-                                <span class="glyphicon glyphicon-triangle-right cstm-glyphicon-add" title="添加" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-triangle-right cstm-glyphicon-add" title="添加"
+                                      aria-hidden="true"></span>
                             </div>
                             <div style="margin-top: 20px;text-align: center;">
-                                <span class="glyphicon glyphicon-triangle-left cstm-glyphicon-remove" title="移除" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-triangle-left cstm-glyphicon-remove" title="移除"
+                                      aria-hidden="true"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-xs-4">
                 <div class="panel panel-default">
                     <div class="panel-body cstm-panel-body">
-                        Basic panel example
+                        与会人员列表
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div style="text-align: center;">
-        <button id="previousStep2" type="button" class="btn btn-lg btn-default">上一步</button>
-        <button id="cancel2" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">取&nbsp;&nbsp;消</button>
-        <button id="nextSteep2" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">下一步</button>
+    <div class="row">
+        <div style="text-align: center;">
+            <button id="cancel2" type="button" class="btn btn-md btn-default">取&nbsp;&nbsp;消</button>
+            <button id="previousStep2" type="button" class="btn btn-md btn-default" style="margin-left: 50px;">上一步
+            </button>
+            <button id="nextSteep2" type="button" class="btn btn-md btn-default" style="margin-left: 50px;">下一步</button>
+        </div>
     </div>
 </div>
 <div class="steepPane3">
@@ -126,11 +137,11 @@
     </div>
     <div class="progressLabel" style="margin-left: 82%;"><label>成功创建</label>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 20px;">
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-body cstm-panel-body">
+                    <div class="panel-body cstm-panel-body" style="padding-top: 20px;">
                         <div class="form-horizontal">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">会议名称：</label>
@@ -180,11 +191,15 @@
             </div>
         </div>
     </div>
-    <div style="text-align: center;">
-        <button id="previousStep3" type="button" class="btn btn-lg btn-default">上一步</button>
-        <button id="cancel3" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">取&nbsp;&nbsp;消</button>
-        <button id="nextSteep3" type="button" class="btn btn-lg btn-default" style="margin-left: 50px;">完&nbsp;&nbsp;成</button>
+    <div class="row">
+        <div style="text-align: center;">
+            <button id="cancel3" type="button" class="btn btn-md btn-default">取&nbsp;&nbsp;消</button>
+            <button id="previousStep3" type="button" class="btn btn-md btn-default" style="margin-left: 50px;">上一步
+            </button>
+            <button id="nextSteep3" type="button" class="btn btn-md btn-default" style="margin-left: 50px;">完&nbsp;&nbsp;成</button>
+        </div>
     </div>
+
 </div>
 </body>
 </html>

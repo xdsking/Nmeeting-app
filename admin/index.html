@@ -20,12 +20,7 @@
     <script type="text/javascript" language="javascript">
         function iFrameHeight() {
             var ifm= $("#iframepage");
-            var subWeb = document.frames ? document.frames["iframepage"].document : ifm[0].contentDocument;
-            if(ifm != null && subWeb != null) {
-                ifm.css("min-height",subWeb.body.scrollHeight+"px");
-                //ifm.height = subWeb.body.scrollHeight;
-                //ifm.width = subWeb.body.scrollWidth;
-            }
+                ifm.css("min-height","600px");
         }
     </script>
     <script src="js/index.js"></script>
@@ -35,7 +30,11 @@
     <ul class="nav nav-tabs navbar-inverse cstm-nav">
         <h2 style="float: left;color: #f5f5f5;margin: 10px 10px;font-weight: bold;"><span>教学管理系统</span></h2>
         <li role="presentation" class="active"><a href="#">功能操作</a></li>
-        <li role="presentation"><a href="#">系统管理</a></li>
+        <li role="presentation" class="disabled"><a href="#">系统管理</a></li>
+        <span class="adminPane">
+            <a>退出</a>
+            <a>admin，欢迎您！</a>
+        </span>
     </ul>
     <div class="row"
          style="margin-top: 30px;border: 1px #ddd solid;margin-left: 0;margin-right: 0;border-radius:4px 4px 0 0;padding: 2px">
@@ -46,19 +45,26 @@
                     <div class="list-group">
                         <a href="#" link="addMeeting" class="list-group-item active">添加会议</a>
                         <a href="#" link="UpdateMeeting" class="list-group-item">更新会议</a>
-                        <a href="#" class="list-group-item">进入会议</a>
-                        <a href="#" class="list-group-item">查看会议</a>
-                        <a href="#" class="list-group-item">资源点播</a>
+                        <a href="#" class="list-group-item disabled">进入会议</a>
+                        <a href="#" class="list-group-item disabled">查看会议</a>
                     </div>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">系统用户</div>
+                <div class="panel-heading">资源管理</div>
                 <div class="panel-body cstm-panel-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">添加用户</a>
-                        <a href="#" class="list-group-item">更新用户</a>
-                        <a href="#" class="list-group-item">查看用户</a>
+                        <a href="#" link="addResource" class="list-group-item">上传资源</a>
+                        <a href="#" link="resourceManage" class="list-group-item">查看资源</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">用户管理</div>
+                <div class="panel-body cstm-panel-body">
+                    <div class="list-group">
+                        <a href="#" link="addUser" class="list-group-item">添加用户</a>
+                        <a href="#" link="userManage" class="list-group-item">查看用户</a>
                     </div>
                 </div>
             </div>
@@ -66,9 +72,9 @@
                 <div class="panel-heading">短信功能</div>
                 <div class="panel-body cstm-panel-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">发送短信</a>
-                        <a href="#" class="list-group-item">分组管理</a>
-                        <a href="#" class="list-group-item">成员管理</a>
+                        <a href="#" class="list-group-item disabled">发送短信</a>
+                        <a href="#" class="list-group-item disabled">分组管理</a>
+                        <a href="#" class="list-group-item disabled">成员管理</a>
                     </div>
                 </div>
             </div>
@@ -77,9 +83,9 @@
         <div class="col-lg-10 col-xs-10 cstm-col-padding">
             <ol class="breadcrumb" style="margin-left: 5px;margin-right: 5px;">
                 <label class="active">位置：</label>
-                <li class="active">功能操作</li>
-                <li class="active">添加会议</li>
-                <li class="active">填写会议信息</li>
+                <li id="position1" class="active">会议管理</li>
+                <li id="position2" class="active">添加会议</li>
+                <li id="position3" class="active">填写会议信息</li>
             </ol>
             <div class="container-fluid">
                 <iframe id="iframepage" onLoad="iFrameHeight()" src="addMeeting.html" style="width: 100%;" frameborder="0" scrolling="no"></iframe>

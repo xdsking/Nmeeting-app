@@ -2,6 +2,7 @@
  * Created by xuds on 2015/11/12.
  */
 $(function () {
+    setPosition3();
     $("#nextSteep1").click(function () {
         $(".steepPane1").fadeOut(0);
         $(".steepPane2").fadeIn(500);
@@ -32,7 +33,23 @@ $(function () {
      }).mouseout(function(){
      $(this).toggleClass("glyphicon-menu-left glyphicon-triangle-left");
      });*/
-    window.onbeforeunload=function(){
+/*    window.onbeforeunload=function(){
         return confirm("确定要离开梦之都网站吗？");
-    }
+    }*/
 });
+var setPosition3=function(){
+    var position3=parent.position3;
+    position3.html("填写会议信息");
+    $(window).unload(function(){
+        position3.html("");
+    });
+    $("#nextSteep1,#previousStep3").click(function(){
+        position3.html("邀请成员");
+    });
+    $("#previousStep2").click(function(){
+        position3.html("填写会议信息");
+    });
+    $("#nextSteep2").click(function(){
+        position3.html("成功创建");
+    });
+};

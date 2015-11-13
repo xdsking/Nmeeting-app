@@ -25,3 +25,14 @@ body {
 .cstm-panel-body{
     padding: 0;
 }
+.adminPane{
+    float: right!important;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+.adminPane a{
+    cursor: pointer;
+    color: white;
+    font-weight: normal;
+    float: right;
+}

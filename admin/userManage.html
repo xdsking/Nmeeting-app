@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../../CDN/lib/bootstrap-3.3.0-dist/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/userManage.css" rel="stylesheet">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/html5shiv.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../CDN/lib/jQuery/jQuery-1.11.1.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+    <script src="../../CDN/lib/bootstrap-3.3.0-dist/dist/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/userManage.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span class="col-lg-1" style="text-align: right;">
+                    <label class="control-label" style="line-height: 32px;">用户：</label>
+                    </span>
+                    <span class="col-lg-2">
+                        <input type="text" class="form-control" placeholder="请输入名称">
+                    </span>
+                    <span class="col-lg-1" style="text-align: right;">
+                        <label class="control-label" style="line-height: 32px;">角色：</label>
+                    </span>
+                    <span class="col-lg-2">
+                        <input type="text" class="form-control" placeholder="">
+                    </span>
+                    <span class="col-lg-4"></span>
+                    <span class="col-lg-2" style="text-align: right;">
+                        <button class="btn btn-default">查&nbsp;&nbsp;询</button>
+                    </span>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-body">
+
+                    <table class="table  table-striped">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>用户</th>
+                            <th>角色</th>
+                            <th>创建时间</th>
+                            <th>描述</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">0</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>张三</td>
+                            <td>学生</td>
+                            <td>2015-11-11</td>
+                            <td>XXXXXXXXXX</td>
+                            <th>
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </div>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class=" footer">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-default">首页</button>
+                        <button type="button" class="btn btn-default">上一页</button>
+                        <button type="button" class="btn btn-default active">3</button>
+                        <button type="button" class="btn btn-default">4</button>
+                        <button type="button" class="btn btn-default">5</button>
+                        <button type="button" class="btn btn-default">6</button>
+                        <button type="button" class="btn btn-default">下一页</button>
+                        <button type="button" class="btn btn-default">末页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
